@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <content>
+            <h1>Formularz zgłoszeniowy</h1>
+    <form action="">
+        <span>
+            <label for="imie">Imię: <i>*</i></label>
+            <input type="text" id="imie" required>
+        </span>
+        <span>
+            <label for="nazwisko">Nazwisko: <i>*</i></label>
+            <input type="text" id="nazwisko" required>
+        </span>
+        <span>
+            <label for="NazwPan">Nazwisko panieńskie: </label>
+            <input type="text" id="NazwPan" placeholder="Opcjonalne">
+        </span>
+        <span>
+            <label for="">Data urodzenia: <i>*</i></label>
+            <input type="date" id="dataUro" required>
+        </span>
+        <span>
+            <label for="">Miejsce Urodzenia: <i>*</i></label>
+            <input type="text" id="" required>
+        </span>
+        <span>
+            <label for="">Stan Cywilny: <i>*</i></label>
+            <select name="" id="StanCywilny">
+                <option value="0"> wybierz</option>
+                <option value="1">sam</option>
+                <option value="2">zajęty</option>
+            </select>
+        </span>
+        <span>
+            <label for="">Obywatelstwo: <i>*</i></label>
+            <input type="text" id="Obywatelstwo" required>
+        </span>
+        <span>
+            <label for="">Narodowość: <i>*</i></label>
+            <input type="text" id="Narodowość" required>
+        </span>
+        <span>
+            <label for="">PESEL: <i>*</i></label>
+            <input type="number" id="" minlength="11" maxlength="11" required>
+        </span>
+        <span>
+            <label for="">Seria i nr dowodu osobistego: <i>*</i></label>
+            <input type="text" id="Seria" required>
+            <input type="number" id="NrOso" required>
+        </span>
+        <span>
+            <label for="">Adres zamieszania i kod Pocztowy: <i>*</i></label>
+            <input type="number" id="AdresZamiesz" min="1" placeholder="Adres" required>
+            <input type="text" pattern="^\d{2}-\d{3}$" id="kodPocztowy" placeholder="Kod" required>
+        </span>
+        <span>
+            <label for="">Rodzaj miejscowości: <i>*</i></label>
+            <select name="" id="RodzMiejsc">
+                <option value="0"> wybierz</option>
+                <option value="1">miasto</option>
+                <option value="2">wieś</option>
+            </select>
+        </span>
+        <span>
+            <label for="">Adres korespondencji i kod Pocztowy: <i>*</i></label>
+            <input type="number" id="AdresKores" min="1" placeholder="Adres" required>
+            <input type="text" pattern="^\d{2}-\d{3}$" id="kodPocztowyKores" placeholder="Kod" required>
+        </span>
+        <span>
+            <label for="">Telefony konytaktowe: <i>*</i></label>
+            <input type="number" id="telfKont" minlength="9" maxlength="9" required>
+            <input type="number" id="telfKont" minlength="9" maxlength="9" placeholder="Opcjonalne">
+        </span>
+        <span>
+            <label for="">Adres Email: <i>*</i></label>
+            <input type="email" id="Email" required>
+        </span>
+        <span>
+            <label for="">Telefon kontaktowy oraz imię i nazwisko do osoby, <br> którą powiadomić w sytuacjach
+                awaryjnych<i>*</i></label>
+            <input type="text" id="telAwa" placeholder="Telefon" minlength="9" maxlength="9" required>
+            <input type="text" id="ImiAwa" placeholder="Imię" required>
+            <input type="text" id="NazAwa" placeholder="Nazwisko" required>
+        </span>
+        <span>
+            <label for="">Imiona rodziców: <i>*</i></label>
+            <input type="text" id="ImMatki" placeholder="Matki" required>
+            <input type="text" id="ImOjca" placeholder="Ojca" required>
+        </span>
+        <span>
+            <label for="">Nazwisko panieńskie matki: <i>*</i></label>
+            <input type="text" id="NazwPanMatk" required>
+        </span>
+        <span>
+            <label for="">Płeć: <i>*</i></label>
+                <a><input type="radio" name="check" class="radio" onclick="onlyOne(this)"> Mężczyzna</a>
+                <a><input type="radio" name="check" class="radio" onclick="onlyOne(this)"> Kobieta</a>  
+        </span>
+        <span>
+            <label for="">Wiek: <i>*</i></label>
+            <a><input type="radio" name="check1" class="radio" onclick="onlyOne1(this)"> 19-20 lat</a>
+            <a><input type="radio" name="check1" class="radio" onclick="onlyOne1(this)"> 21-23 lat</a>  
+            <a><input type="radio" name="check1" class="radio" onclick="onlyOne1(this)"> 24-26 lat</a>
+            <a><input type="radio" name="check1" class="radio" onclick="onlyOne1(this)"> >27 lat</a>   
+        </span>
+        <span>
+            <label for="">Rok studiów: <i>*</i></label>
+            <a><input type="radio" name="check2" class="radio" onclick="onlyOne2(this)"> I rok</a>
+            <a><input type="radio" name="check2" class="radio" onclick="onlyOne2(this)"> II rok</a>  
+            <a><input type="radio" name="check2" class="radio" onclick="onlyOne2(this)"> III rok</a>
+            <a><input type="radio" name="check2" class="radio" onclick="onlyOne2(this)"> IV rok</a>
+            <a><input type="radio" name="check2" class="radio" onclick="onlyOne2(this)"> V rok</a>
+            <a><input type="radio" name="check2" class="radio" onclick="onlyOne2(this)"> Studia doktorackie</a>      
+        </span>
+        <span>
+            <label for="">Na jakim wydziale studiujesz? <i>*</i></label>
+            <input type="text" id="Wydział" required>
+        </span>
+        <span>
+            <label for="">W jakim akademiku mieszkasz? <i>*</i></label>
+            <select required>
+                <datalist >
+                    <option>Wybierz</option>
+                    <option>Studencki nr 1 &quot;OLIMP&quot;</option> 
+                    <option>Dom Studencki nr 2 &quot;BABILON&quot; </option> 
+                    <option>Studencki nr 4 &quot;FILUTEK&quot;</option>
+                    <option>Dom Studencki nr 5 &quot;STRUMYK&quot;</option> 
+                    <option>Studencki nr 6 &quot;BRATEK&quot;</option> 
+                    <option>Dom Studencki nr 7 &quot;ZAŚCIANEK&quot;</option> 
+                    <option>Studencki nr 8 &quot;STOKROTKA&quot;</option> 
+                    <option>Studencki nr 9</option> 
+                    <option>Dom Studencki nr 10 &quot;HAJDUCZEK&quot;</option> 
+                    <option>Studencki nr 11 &quot;BONUS&quot;</option> 
+                    <option>Dom Studencki nr 12 &quot;PROMYK&quot;</option> 
+                    <option>Dom Studencki nr 13 &quot;STRASZNY DWÓR&quot;</option> 
+                    <option>Dom Studencki nr 14 &quot;KAPITOL&quot;</option> 
+                    <option>Dom Studencki nr 15 &quot;MARATON&quot;</option> 
+                    <option>Studencki nr 16 &quot;ITAKA&quot;</option> 
+                    <option>Studencki nr 17 &quot;ARKADIA&quot;</option> 
+                    <option>Studencki nr 18</option> 
+                    <option>Studencki nr 19</option> 
+                </datalist>
+            </select>
+        </span>
+        <span>
+            <label for="">Dlaczego zdecydowałaś/zdecydowałeś się aby zamieszkać w akademiku? (zaznacz X
+                w kwadraciku) <i>*</i></label>
+            <a><input type="checkbox" name="check3" class="checkbox" onclick="onlyOne3(this)">Względy finansowe</a>
+            <a><input type="checkbox" name="check3" class="checkbox" onclick="onlyOne3(this)">Bliskość uczelni</a>  
+            <a><input type="checkbox" name="check3" class="checkbox" onclick="onlyOne3(this)">Za namową koleżanek/kolegów</a>
+            <a><input type="checkbox" name="check3" class="checkbox" onclick="onlyOne3(this)">Problemy ze znalezieniem innego miejsca</a>
+            <a><input type="checkbox" name="check3" class="checkbox" onclick="onlyOne3(this)">Inne: <input type="text"></a>      
+        </span>
+        <span>
+            <label for="">Jak często wracasz do swojego rodzinnego domu? <i>*</i></label>
+            <a><input type="radio" name="check4" class="radio" onclick="onlyOne4(this)">Kilka razy w tygodniu</a>
+            <a><input type="radio" name="check4" class="radio" onclick="onlyOne4(this)">Co tydzień na weekend</a>  
+            <a><input type="radio" name="check4" class="radio" onclick="onlyOne4(this)">Raz na 2 tygodnie</a>
+            <a><input type="radio" name="check4" class="radio" onclick="onlyOne4(this)">Raz na miesiąc</a>
+            <a><input type="radio" name="check4" class="radio" onclick="onlyOne4(this)">Kilka razy w roku</a>      
+        </span>
+        <span>
+            <label for="">Stan cywilny:<i>*</i></label>
+            <a><input type="radio" name="check5" class="radio" onclick="onlyOne5(this)">Panna/Kawaler</a>
+            <a><input type="radio" name="check5" class="radio" onclick="onlyOne5(this)">Mężatka/żonaty</a>      
+        </span>
+        <span>
+            <label for="">Z jakiego województwa pochodzisz<i>*</i></label>
+            <input type="text" id="Wojewodztwo" required>
+        </span>
+        <span>
+            <label for="">Podaj wielkość Twojego rodzinnego miejsca zamieszkania<i>*</i></label>
+            <a><input type="radio" name="check5" class="radio" onclick="onlyOne5(this)">Wieś</a>
+            <a><input type="radio" name="check5" class="radio" onclick="onlyOne5(this)">Miasto do 10 tys. mieszkańców</a>  
+            <a><input type="radio" name="check5" class="radio" onclick="onlyOne5(this)">Miasto od 10 do 50 tys. mieszkańców</a>
+            <a><input type="radio" name="check5" class="radio" onclick="onlyOne5(this)">Miasto od 50 do 100 tys. mieszkańców</a>
+            <a><input type="radio" name="check5" class="radio" onclick="onlyOne5(this)">Miasto powyżej 100 tys. mieszkańców</a>      
+        </span>
+        <span>
+            <label for="">Jaki jest miesięczny dochód gospodarstwa domowego przypadająca na 1 osobę w rodzinie?<i>*</i></label>
+            <a><input type="radio" name="check7" class="radio" onclick="onlyOne7(this)">Do 600 zł</a>
+            <a><input type="radio" name="check7" class="radio" onclick="onlyOne7(this)">600 - 1200 zł</a>  
+            <a><input type="radio" name="check7" class="radio" onclick="onlyOne7(this)">1200 - 1800 zł</a>
+            <a><input type="radio" name="check7" class="radio" onclick="onlyOne7(this)">1800 - 2400 zł</a>
+            <a><input type="radio" name="check7" class="radio" onclick="onlyOne7(this)">2400 - 3600 zł</a>
+            <a><input type="radio" name="check7" class="radio" onclick="onlyOne7(this)">Powyżej 3600 zł</a>      
+        </span>
+        <span>
+            <label for="">Jakie są Twoje źródła dochodu (można zaznaczyć kilka)?<i>*</i></label>
+            <a><input type="checkbox" class="checkbox">Rodzice/rodzina</a>
+            <a><input type="checkbox" class="checkbox">Stypendium</a>  
+            <a><input type="checkbox" class="checkbox">Praca dorywcza</a>
+            <a><input type="checkbox" class="checkbox">Praca stała</a>
+            <a><input type="checkbox" class="checkbox">Własna działalność gospodarcza</a>
+            <a><input type="checkbox" class="checkbox">Inne: <input type="text"></a>      
+        </span>
+        <span>
+            <label for="">Jaka jest wysokość wypracowanego przez Ciebie dochodu?<i>*</i></label>
+            <a><input type="radio" name="check8" class="radio" onclick="onlyOne8(this)">Do 300 zł</a>
+            <a><input type="radio" name="check8" class="radio" onclick="onlyOne8(this)">300 - 600 zł</a>  
+            <a><input type="radio" name="check8" class="radio" onclick="onlyOne8(this)">600 - 900 zł</a>
+            <a><input type="radio" name="check8" class="radio" onclick="onlyOne8(this)">Powyżej 900 zł</a>      
+        </span>
+        <span>
+            <label for="">Czy starasz się odkładać/oszczędzać pieniądze?<i>*</i></label>
+            <a><input type="radio" name="check9" class="radio" onclick="onlyOne9(this)">tak</a>
+            <a><input type="radio" name="check9" class="radio" onclick="onlyOne9(this)">nie</a>      
+        </span>
+        <span>
+            <label for="">Czy segregujesz śmieci?<i>*</i></label>
+            <a><input type="radio" name="check10" class="radio" onclick="onlyOne10(this)">tak</a>
+            <a><input type="radio" name="check10" class="radio" onclick="onlyOne10(this)">nie</a>      
+        </span>
+        <span>
+            <label for="">Jak oceniasz ilość miejsc gdzie możesz segregować śmieci?<i>*</i></label>
+            <a><input type="radio" name="check11" class="radio" onclick="onlyOne11(this)">Wystarczjąca</a>
+            <a><input type="radio" name="check11" class="radio" onclick="onlyOne11(this)">Niewystarczająca</a>    
+            <a><input type="radio" name="check11" class="radio" onclick="onlyOne11(this)">Nie mam zdania</a>      
+        </span>
+        <span>
+            <label for="">Czy czujesz się bezpiecznie na Miasteczku Studenckim AGH?<i>*</i></label>
+            <a><input type="radio" name="check12" class="radio" onclick="onlyOne12(this)">Zdecydowanie tak</a>
+            <a><input type="radio" name="check12" class="radio" onclick="onlyOne12(this)">Raczej tak</a>    
+            <a><input type="radio" name="check12" class="radio" onclick="onlyOne12(this)">Raczej nie</a>      
+        </span>
+        <span id="menu">
+            <button id="submit" type="submit" class="btnMenu">Prześlij</button>
+        </span>
+    </form> 
+</content>
+</body>
+</html>
+
